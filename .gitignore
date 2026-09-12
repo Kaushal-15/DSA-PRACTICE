@@ -1,0 +1,23 @@
+# Windows executables
+*.exe
+
+# Object files (Windows/Linux/macOS)
+*.o
+*.obj
+
+# Dynamic libraries
+*.dll
+*.so
+*.dylib
+
+# Static libraries
+*.a
+*.lib
+
+# Default Linux/macOS executable output
+a.out
+
+# IDE and OS specific files
+.VSCode/
+.idea/
+.DS_Store

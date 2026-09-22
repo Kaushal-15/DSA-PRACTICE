@@ -7,7 +7,6 @@
 char stack[MAX];
 char infix[MAX], postfix[MAX];
 int top = -1;
-
 void push(char c);
 char pop();
 
@@ -57,8 +56,8 @@ int main()
     }
 
     printf("The result array is\n");
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++){
         printf("%d ", result[i]);
-
+    }
     return 0;
 }

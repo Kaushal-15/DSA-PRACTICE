@@ -88,15 +88,12 @@ int space(char c)
 void print()
 {
     int i = 0;
-
     printf("Postfix Expression: ");
-
     while (postfix[i] != '\0')
     {
         printf("%c", postfix[i]);
         i++;
     }
-
     printf("\n");
 }
 
@@ -104,14 +101,11 @@ void intopos()
 {
     int i, j = 0;
     char symbol;
-
     for (i = 0; i < strlen(infix); i++)
     {
         symbol = infix[i];
-
         if (space(symbol) || symbol == '\n')
             continue;
-
         switch (symbol)
         {
             case '(':
@@ -123,10 +117,8 @@ void intopos()
                 {
                     postfix[j++] = pop();
                 }
-
                 if (!isempty() && stack[top] == '(')
                     pop();
-
                 break;
 
             case '^':
@@ -141,19 +133,15 @@ void intopos()
                 {
                     postfix[j++] = pop();
                 }
-
                 push(symbol);
                 break;
-
             default:
                 postfix[j++] = symbol;
         }
     }
-
     while (!isempty())
     {
         postfix[j++] = pop();
     }
-
     postfix[j] = '\0';
 }
